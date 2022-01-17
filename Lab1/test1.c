@@ -1,5 +1,7 @@
 #include <stdio.h> //need this to use the printf () function
-#include "lab1.h" //need this to link our Lab 1 functions
+#include "lab1.h" //need this to link our Lab 1 
+
+
 
 int main() {
     // Testing Part 1

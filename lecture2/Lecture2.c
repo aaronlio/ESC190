@@ -139,4 +139,9 @@ void adele(){
 void adele();
 */
 
+//------------Functions------------//
+/* return_type function_name(parameter_type parameter_name){
+    statements
+}*/
+
 
