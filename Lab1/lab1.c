@@ -15,9 +15,15 @@ int sandy_eats(char menu_item[]){
     if (strstr(menu_item, "I") != NULL || strstr(menu_item, "i") != NULL ||  strstr(menu_item, "J") != NULL || strstr(menu_item, "j") != NULL ||  strstr(menu_item, "k") != NULL || strstr(menu_item, "K") != NULL  || strstr(menu_item, "fish") != NULL || strstr(menu_item, "Fish") != NULL) {
         return 0;
     } 
-    if (strlen(menu_item) % 2 != 0){
-        return 0;
+    int length = 0;
+    int max_length = strlen(menu_item);
+    for (int i = 0; i < max_length; i++){
+        if (menu_item[i] != ' '){
+            length ++;
+        }
     }
+    if (length % 2 == 0) return 0;
+    
     return 1;
 }
 
