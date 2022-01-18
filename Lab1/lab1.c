@@ -12,7 +12,7 @@ double adjust_price(double original_price) {
 }
 
 int sandy_eats(char menu_item[]){
-    if (strstr(menu_item, "I") != NULL || strstr(menu_item, "J") != NULL || strstr(menu_item, "K") != NULL || strstr(menu_item, "fish") != NULL || strstr(menu_item, "Fish") != NULL) {
+    if (strstr(menu_item, "I") != NULL || strstr(menu_item, "i") != NULL ||  strstr(menu_item, "J") != NULL || strstr(menu_item, "j") != NULL ||  strstr(menu_item, "k") != NULL || strstr(menu_item, "K") != NULL  || strstr(menu_item, "fish") != NULL || strstr(menu_item, "Fish") != NULL) {
         return 0;
     } 
     if (strlen(menu_item) % 2 != 0){
