@@ -1,5 +1,6 @@
 #include <math.h>
 #include <string.h>
+#include <stdio.h>
 #include "lab1.h"
 
 double split_bill(double base_amount, double tax_rate, double tip_rate, int num_people) {
