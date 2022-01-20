@@ -9,7 +9,7 @@ int main() {
     printf("The split will be: $ %.2f.\n", test_p1);
     // $32.50
 
-    double test_p11 = split_bill (50, 0.0000000000000001, 0, 1);
+    double test_p11 = split_bill (50, 0.000001, 0, 1);
     printf ( " The split will be : $%.2f.\n " , test_p11 );
     // $50.01
     

@@ -100,8 +100,8 @@ Best case = O(n):
 
 Worst case = O(n^2):
     - Array is sorted in reverse
-    - n-1 omparisons --> O(n)
-    1+2+3+...(n-1) = (n^2 + n)/2 --> O(n^2)
+    - 1+2+3+...(n-1) =          (n^2 + n)/2  comparisons --> O(n2)
+    1+2+3+...(n-1) =            (n^2 + n)/2 swaps  --> O(n^2)
 
 */
 // ------------------------------ Selection sort ------------------------//
@@ -138,16 +138,18 @@ Iterate through unsorted section, moving largest element of unsorted to the sort
 1,2,        3, 4, 5 
 1,2,3,4,5
 
-Best case = O(n^2):
+Best case = O(n):
     - Sorted
-    - (n-1)...2+1 comparisons --> O(n^2)
     - No swaps
+    - if we count the number of swaps per sweepl we can stop if 0 swaps were made
+        - ie. after n-1 comparisons -> O(n-1 + 0) -> O(n)
+    - without early termination, we would do (n-1) + ...2 + 1 = O(n^2)
 
 Worst Case = O(n^2):
     - In reverse
     - (n-1) + (n-2) + ... 2+1 comparisons --> O(n^2)
     -  (n-1) + (n-2) + ... 2+1 swaps --> O(n^2)
-
+*/
 // ------------------------------ Merge sort ------------------------//
 /* 
 
@@ -175,9 +177,12 @@ When we merge two array, each with m elements, we have roughly O(2m) -> O(m)
 Total merging complexity = number of levels * n
     - There are log2 n elements
 
+If we disregard the single element merges
+    - Then we can say the number of levels is log2n
+
 Splitting complexity O(1) * n-1 elements -> O(n-1) -> O(n)
 
 Merging complexity -> O(nlogn)
 O(nlogn) grows faster than O(n)
 
-Best/Worst case of merge sort is O(nlogn)
+Best/Worst case of merge sort is O(nlogn)*/
