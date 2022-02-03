@@ -12,30 +12,32 @@
     */
 
 void append(int** x, int* n, int val){
-
     
-    printf("%p\n", x);
+    
+    *x = (int *) realloc(*x, ((*n+1) * sizeof(int)));
+    (*x)[*n] = val;
     *n += 1;
-    printf("%d\n", *n);
-    x = (int **) realloc(x, ((*n) * sizeof(int)));
-    *(x+*n) = &val;
 
-    printf("%d\n", (*(*(x+*n))));
+
 }
-int main(){
-    int list[] = {1,2,3};
-    int* ptr = list;
-    int **x = &ptr;
-    int count = sizeof(list)/sizeof(list[0]);
-    int* n = &count;
-    x = (int **) malloc(((*n) * sizeof(int)));
+/*int main() { 
+    int len = 5;
+    int *n = &len;
     
-    int val = 5;
+    int *arr = (int *) malloc(len * sizeof(int));
+    for (int i = 0; i < *n; i++) {
+        arr[i] = i;
+    }
+    int **x = &arr;
 
-    append(x, n, val);
+    append(x, n, 69);
 
-    return 0;
-}
+    printf("%d\n", *n);
+    for (int i = 0; i < *n; i++) {
+        printf("%d ", *(*x + i));
+    }
+    free(arr);
+ }*/
 // *n is number of items in list
 // *x, **x[0] is the first element (*x is the pointer to the first) of the list, *(x+(*n+1)), **x[*n+1] is the last
 // x is the pointer to the pointer of the first element of the list.
