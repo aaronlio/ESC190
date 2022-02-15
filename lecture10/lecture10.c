@@ -103,3 +103,4 @@ If a function can modify the first node, but is only passed a pointer to the fir
 
 - Working with a double pointer to the first node allows you to modify the head pointer.
 - We can then return other useful data (ie. confirmation of insertion/deletion, etc)
+*/
